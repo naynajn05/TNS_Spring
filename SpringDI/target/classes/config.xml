@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="gpObject" class="com.tnsif.di1.GPay"></bean>
+
+<bean id="a" class="com.tnsif.di1.Amazon">
+	<property name="gp" ref="gpObject"/>
+	</bean>
+
+
+<bean id="z" class="com.tnsif.di1.Zomato">
+	<property name="gp" ref="gpObject"/>
+</bean>
+
+
+<bean id="i" class="com.tnsif.di1.IRCTC">
+	<property name="gp" ref="gpObject"/>
+</bean>
+
+
+        
+</beans>
